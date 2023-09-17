@@ -1,6 +1,4 @@
 https://github.com/marrollyn/zakrivayuschiy-teg-f
-# zakrivayuschiy-teg-f
-Проект "Закрывающий тег"
 
 # ПРОЕКТ "ЗАКРЫВАЮЩИЙ ТЕГ"
 Проект "Закрывающий тег"
