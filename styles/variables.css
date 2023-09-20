@@ -1,1 +1,40 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --font: "Inter-Variable";
+    --font-accent: "PressStart2P-Regular";
+    --header-font-weight: 400;
+    --repeat-gradient-from-color:rgb(211 211 211 / 0);
+}
+
+:root.theme-light {
+    --bg-color: #FFF;
+    --main-color:#000;
+    --font-weight: 400;
+    --title-font-weight: 700;
+    --liner-gradient-from-color:#E7E7E7;
+    --liner-gradient-to-color:#1A1A1A;
+    --repeat-gradient-to-color:rgb(211 211 211);
+}
+
+:root.theme-dark {
+    --bg-color: #000;
+    --main-color: #00CC14;
+    --font-weight:465;
+    --title-font-weight: 785;
+    --liner-gradient-from-color:#007f0c;
+    --liner-gradient-to-color:#004306;
+    --repeat-gradient-to-color:rgb(0 0 0);
+}
+
+@media (prefers-color-scheme: light) {
+
+	:root {
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+
+	:root {
+	}
+}
