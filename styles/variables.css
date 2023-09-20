@@ -5,6 +5,8 @@
     --font-accent: "PressStart2P-Regular";
     --header-font-weight: 400;
     --repeat-gradient-from-color:rgb(211 211 211 / 0);
+    --header-logo-font-size: clamp(3.0625rem, 4.6859rem + -6.9264vw, 4.0625rem);
+    --header-txt-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 :root.theme-light {

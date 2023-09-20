@@ -18,7 +18,9 @@
 	</head>
 	<body class="page">
 		<header class="header">
-      <h1>&lt;/HTML&gt;</br>закрывающий тег</h1>
+      		<h1 class="header__title">
+				<span class="header-title__logo">&lt;/html&gt;</span>
+				<span class="header-title__text">закрывающий тег</span></h1>
 			<nav class="theme-menu header__theme-menu">
 				<!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
 				<ul class="theme-menu__list">
@@ -46,13 +48,38 @@
 			</nav>
 		</header>
 		<main>
-      <svg viewBox="0 0 50 50" width="50px" height="50px">
-        <use href="#floppy">
-      </svg> 
-      <svg>
-        <use href="/svg/floppy.svg#floppy">
-      </svg>
-    </main>
+			<section class="sprints">
+				<ul class="sprints__cards-list">
+					<li class="sprints__card-item">
+						<article class="card card-type-">
+							<h2>1</h2>
+							<img>
+							<p></p>
+							<div>
+								<button></button>
+							</div>
+						</article>
+					</li>
+					<li class="sprints__card-item">
+						<article class="card card-type-">
+							<h2>2</h2>
+							<img>
+							<p></p>
+							<div>
+								<button></button>
+							</div>
+						</article>
+					</li>
+				</ul>
+			</section>
+
+      		<svg viewBox="0 0 50 50" width="50px" height="50px">
+       			<use href="#floppy">
+      		</svg> 
+      		<svg>
+        		<use href="/svg/floppy.svg#floppy">
+      		</svg>
+    	</main>
 		<script src="./scripts/like.js"></script>
 	</body>
 </html>

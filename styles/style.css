@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   max-inline-size: 1440px;
-  font-family: "Inter-Variable", sans-serif;
+  font-family: var(--font, "Inter-Variable", sans-serif);
   font-variation-settings: "wght" var(--font-weight, 400);
   background-color: var(--bg-color, #FFF);
   color: var(--main-color,#000);
@@ -37,4 +37,45 @@
   var(--repeat-gradient-from-color, rgb(211 211 211 / 0)) 4px), linear-gradient(var(--liner-gradient-from-color, #E7E7E7), var(--liner-gradient-to-color, #1A1A1A));
   background-size: cover;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 6.25rem;
+  font-family: var(--font-accent, "PressStart2P-Regular", sans-serif);
+  gap: 1.5625rem;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-transform: uppercase;
+
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.header-title__logo {
+  font-size: var(--header-logo-font-size, clamp(3.0625rem, 4.6859rem + -6.9264vw, 4.0625rem));
+}
+
+.header-title__text {
+  font-size: var(--header-txt-font-size, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
+}
+
+.theme-menu__button {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  background-color: transparent;
+  border: none;
+}
+
 
