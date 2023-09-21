@@ -65,11 +65,61 @@
 @media (prefers-color-scheme: light) {
 
 	:root {
+        --bg-color: #FFF;
+    --main-color:#000;
+    --font-weight: 400;
+    --title-font-weight: 700;
+    --liner-gradient-from-color:#E7E7E7;
+    --liner-gradient-to-color:#1A1A1A;
+    --repeat-gradient-to-color:rgb(211 211 211);
+    --theme-background-image:  repeating-linear-gradient(to top,rgb(211 211 211 / 0) 0, 
+    rgb(211 211 211) 1px,
+    rgb(211 211 211) 2px,
+    rgb(211 211 211 / 0) 3px,
+    rgb(211 211 211 / 0) 4px),  
+    repeating-linear-gradient(to right, rgb(211 211 211 / 0) 0,
+    rgb(211 211 211) 1px,
+    rgb(211 211 211) 2px,
+    rgb(211 211 211 / 0) 3px,
+    rgb(211 211 211 / 0) 4px), 
+    linear-gradient(#E7E7E7 0.01%, #1A1A1A);
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 
 	:root {
+        --bg-color: #000;
+    --main-color: #00CC14;
+    --font-weight:465;
+    --title-font-weight: 785;
+    --liner-gradient-from-color:#007f0c;
+    --liner-gradient-to-color:#004306;
+    --repeat-gradient-to-color:rgb(0 0 0);
+    --theme-background-image:  repeating-linear-gradient(to top,rgb(211 211 211 / 0) 0, 
+    rgb(0 0 0) 1px,
+    rgb(0 0 0) 2px,
+    rgb(211 211 211 / 0) 3px,
+    rgb(211 211 211 / 0) 4px),  
+    repeating-linear-gradient(to right, rgb(211 211 211 / 0) 0,
+    rgb(0 0 0) 1px,
+    rgb(0 0 0) 2px,
+    rgb(211 211 211 / 0) 3px,
+    rgb(211 211 211 / 0) 4px), 
+    linear-gradient(#007f0c, #004306);
 	}
 }
+
+
+/* 
+<path class="heart-stroke" fill="currentColor" 
+обводка сердца
+
+path class="heart-body" fill="red" 
+заливка сердца
+
+<path class="glare" fill="#fff" 
+блики
+
+<path class="drops" fill="red" 
+брызги */

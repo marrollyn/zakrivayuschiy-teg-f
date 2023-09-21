@@ -11,7 +11,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
 */
 
 .page {
@@ -23,17 +22,6 @@
   background-color: var(--bg-color, #FFF);
   color: var(--main-color,#000);
   margin: 0 auto;
-  /* background-image: repeating-linear-gradient(to top,rgb(211 211 211 / 0) 0, 
-  rgb(211 211 211) 1px,
-  rgb(211 211 211) 2px,
-  rgb(211 211 211 / 0) 3px,
-  rgb(211 211 211 / 0) 4px),  
-  repeating-linear-gradient(to right, rgb(211 211 211 / 0) 0,
-  rgb(211 211 211) 1px,
-  rgb(211 211 211) 2px,
-  rgb(211 211 211 / 0) 3px,
-  rgb(211 211 211 / 0) 4px), 
-  linear-gradient(#E7E7E7 0.01%, #1A1A1A); */
   background-image: var(--theme-background-image);
   background-attachment: fixed;
 	background-position: center; 
@@ -44,7 +32,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-block-start: 6.25rem;
   font-family: var(--font-accent, "PressStart2P-Regular", sans-serif);
   gap: 1.5625rem;
   background-color: var(--bg-color, #FFF);
@@ -104,24 +91,131 @@
   left: calc((0.875rem + 4px)*(-1));
 }
 
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:enabled:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
 
 .cards {
   margin: 0 auto;
   max-inline-size: 696px;
+  /* min-block-size: 959px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
+  margin-block-end: 105px;
 }
 
-.floppy_icon {
+.card {
+  width: 100%;
+  /* max-inline-size: 696px; */
+  min-block-size: 959px;
+  /* margin-block-end: 54px; */
+  outline: 2px solid var(--main-color, #000);
+  background-color: var(--bg-color, #FFF);
+} 
+
+.card__title {
+  font-family: var(--font);
+  font-size: 18px;
+}
+
+.card__img {
+  background-position: center;
+	background-size: contain;
+	width: 100%;
+  height: 100%;
+  border-top: 2px solid var(--main-color, #000);
+  border-bottom: 2px solid var(--main-color, #000);
+}
+
+.card__button {
+  background-color: var(--bg-color, #FFF);
+  font-family: var(--font-accent, "PressStart2P-Regular", sans-serif);
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  color: inherit;
+  border:none;
+}
+
+.card__text {
+  margin: 25px;
+  font-family: var(--font);
+  font-size: 18px;
+}
+
+.card__text p:not(:last-child) {
+  margin-block-end: 27px;
+}
+
+/* .cards .card:not(:last-child) {
+  margin-block-end: 54px;
+}
+
+.cards .card:last-child {
+  margin-block-end: 27px;
+} */
+
+.card__button-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  padding-block-end: 25px;
+  margin-inline-end: 25px;
+}
+
+.card__icon-button {
+  height: 38px;
+  width: 27px;
+}
+
+.card__like-button {
+  outline: 2px solid var(--main-color, #000);
+  width: 130px;
+  height: 38px;
+  padding: 9px 17px;
+}
+
+.like-icon {
+  width: 36px;
+}
+
+.cards__save-button {
+  width: 335px;
+  height: 51px;
+  outline: 2px solid var(--main-color, #000);
+  background-color: var(--bg-color, #FFF);
+  font-family: var(--font-accent, "PressStart2P-Regular", sans-serif);
+  font-size: 0.875rem;
+  color: inherit;
+  border:none;
+  /* align-self: center; */
+}
+
+.save-button__icon {
+  width: 21px;
+}
+
+/* .floppy_icon {
   width:22px
 }
 /*.floppy_icon-use {
   width: 100%;
-} */
+}
 
 .card-pic {
   display: block;
   width:200px;
   height: 200px;
-}
+} */
 
 @media (width <= 375px) {}
 
