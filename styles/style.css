@@ -23,19 +23,21 @@
   background-color: var(--bg-color, #FFF);
   color: var(--main-color,#000);
   margin: 0 auto;
-  background-image: repeating-linear-gradient(90deg,
-  var(--repeat-gradient-from-color, rgb(211 211 211 / 0)) 0,
-  var(--repeat-gradient-to-color, rgb(211 211 211)) 1px,
-  var(--repeat-gradient-to-color, rgb(211 211 211)) 2px,
-  var(--repeat-gradient-from-color, rgb(211 211 211 / 0)) 3px,
-  var(--repeat-gradient-from-color, rgb(211 211 211 / 0)) 4px),  
-  repeating-linear-gradient(180deg,
-  var(--repeat-gradient-from-color, rgb(211 211 211 / 0)) 0,
-  var(--repeat-gradient-to-color, rgb(211 211 211)) 1px,
-  var(--repeat-gradient-to-color, rgb(211 211 211)) 2px,
-  var(--repeat-gradient-from-color, rgb(211 211 211 / 0)) 3px,
-  var(--repeat-gradient-from-color, rgb(211 211 211 / 0)) 4px), linear-gradient(var(--liner-gradient-from-color, #E7E7E7), var(--liner-gradient-to-color, #1A1A1A));
-  background-size: cover;
+  /* background-image: repeating-linear-gradient(to top,rgb(211 211 211 / 0) 0, 
+  rgb(211 211 211) 1px,
+  rgb(211 211 211) 2px,
+  rgb(211 211 211 / 0) 3px,
+  rgb(211 211 211 / 0) 4px),  
+  repeating-linear-gradient(to right, rgb(211 211 211 / 0) 0,
+  rgb(211 211 211) 1px,
+  rgb(211 211 211) 2px,
+  rgb(211 211 211 / 0) 3px,
+  rgb(211 211 211 / 0) 4px), 
+  linear-gradient(#E7E7E7 0.01%, #1A1A1A); */
+  background-image: var(--theme-background-image);
+  background-attachment: fixed;
+	background-position: center; 
+	background-size: cover;
 }
 
 .header {
@@ -45,6 +47,14 @@
   margin-block-start: 6.25rem;
   font-family: var(--font-accent, "PressStart2P-Regular", sans-serif);
   gap: 1.5625rem;
+  background-color: var(--bg-color, #FFF);
+  max-inline-size: 696px;
+  max-block-size: 364px;
+  margin: 0 auto;
+  border: 2px solid var(--main-color, #000);
+  margin-block-start: 102px;
+  margin-block-end: 104px;
+  
 }
 
 .header__title {
@@ -53,7 +63,12 @@
   align-items: center;
   gap: 1.25rem;
   text-transform: uppercase;
+  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
 
+}
+
+.theme-menu {
+  margin-block-end: 1.5625rem;
 }
 
 .theme-menu__list {
@@ -71,11 +86,43 @@
   font-size: var(--header-txt-font-size, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
 }
 
+.theme-menu__item {
+  position: relative;
+}
+
 .theme-menu__button {
   text-transform: uppercase;
   font-size: 0.875rem;
   background-color: transparent;
   border: none;
 }
+
+.theme-menu__button:disabled::before {
+  content:"▶";
+  width: 1rem;
+  position: absolute;
+  left: calc((0.875rem + 4px)*(-1));
+}
+
+
+.cards {
+  margin: 0 auto;
+  max-inline-size: 696px;
+}
+
+.floppy_icon {
+  width:22px
+}
+/*.floppy_icon-use {
+  width: 100%;
+} */
+
+.card-pic {
+  display: block;
+  width:200px;
+  height: 200px;
+}
+
+@media (width <= 375px) {}
 
 
