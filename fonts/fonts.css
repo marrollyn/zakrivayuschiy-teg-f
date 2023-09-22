@@ -7,16 +7,16 @@
     src: 
     local("Inter-Variable"),
     url(./Inter-Variable.woff2)
-    format(woff2 supports variations),
+    format("woff2 supports variations"),
     url(./Inter-Variable.woff2)
-    format(woff2-variations);
+    format("woff2-variations");
 }
 
 @font-face {
     font-display: swap;
-    font-weight: 400 700;
+    font-weight: 400;
     font-family: "PressStart2P-Regular";
     src: 
     url(./PressStart2P-Regular.woff)
-    format(woff2);
+    format("woff2");
 }

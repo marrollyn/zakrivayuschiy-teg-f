@@ -88,7 +88,30 @@
   content:"▶";
   width: 1rem;
   position: absolute;
-  left: calc((0.875rem + 4px)*(-1));
+  left: calc((0.875rem)*(-1));
+  animation: moving 0.5s infinite ease-in-out alternate;
+}
+
+@keyframes moving {
+  from {
+    left: calc((0.875rem)*(-1));
+  }
+  to {
+    left: calc((0.875rem + 4px)*(-1));
+  }
+}
+
+.theme-menu__button:focus {
+	outline: none;
+}
+
+.theme-menu__button:enabled:focus-visible {
+	outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled:focus-visible {
+	outline: none;
 }
 
 .theme-menu__button:disabled {
@@ -96,9 +119,28 @@
   pointer-events: none;
 }
 
+.theme-menu__button:enabled {
+  transition: color 0.3s ease;
+}
+
+.theme-menu__button:enabled::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  margin-block-end: -5px;
+  background-color: var(--main-color,#000);
+  transition: width 0.3s ease;
+  opacity: 0.6;
+}
+
 .theme-menu__button:enabled:hover {
   cursor: pointer;
   opacity: 0.6;
+}
+
+.theme-menu__button:enabled:focus-visible::after {
+  width: 100%;
 }
 
 .cards {
@@ -125,6 +167,32 @@
   font-family: var(--font);
   font-size: 18px;
 }
+
+.card__img-box {
+  position: relative;
+}
+
+.card__img-lbl {
+  position: absolute;
+  font-family: var(--font-accent, "PressStart2P-Regular", sans-serif);
+  font-size: 14px;
+  text-transform: uppercase;
+  z-index: 1;
+  top: 30px;
+  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  color:var(--main-color, #000);
+  font-weight: var(--font-weight, 400);
+}
+
+@supports((text-stroke: 1px var(--bg-color, #FFF)) or (-webkit-text-stroke: 1px var(--bg-color, #FFF))) {
+  .card__img-lbl {
+      -webkit-text-stroke: 1px var(--bg-color, #FFF);
+      text-stroke: 1px var(--bg-color, #FFF);
+      text-shadow: none;
+  }
+} 
 
 .card__img {
   background-position: center;
@@ -153,14 +221,6 @@
 .card__text p:not(:last-child) {
   margin-block-end: 27px;
 }
-
-/* .cards .card:not(:last-child) {
-  margin-block-end: 54px;
-}
-
-.cards .card:last-child {
-  margin-block-end: 27px;
-} */
 
 .card__button-box {
   display: flex;
@@ -204,19 +264,19 @@
   width: 21px;
 }
 
-/* .floppy_icon {
-  width:22px
-}
-/*.floppy_icon-use {
-  width: 100%;
-}
-
-.card-pic {
-  display: block;
-  width:200px;
-  height: 200px;
-} */
-
 @media (width <= 375px) {}
 
 
+
+/* 
+<path class="heart-stroke" fill="currentColor" 
+обводка сердца
+
+path class="heart-body" fill="red" 
+заливка сердца
+
+<path class="glare" fill="#fff" 
+блики
+
+<path class="drops" fill="red" 
+брызги */
