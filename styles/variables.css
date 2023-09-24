@@ -5,7 +5,7 @@
     --font-accent: "PressStart2P-Regular";
     --header-font-weight: 400;
     --repeat-gradient-from-color:rgb(211 211 211 / 0);
-    --header-logo-font-size: clamp(3.0625rem, 4.6859rem + -6.9264vw, 4.0625rem);
+    --header-logo-font-size: clamp(3.0625rem, 2.6224rem + 1.8779vw, 4.3125rem);
     --header-txt-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     --theme-background-image:  repeating-linear-gradient(to top,rgb(211 211 211 / 0) 0, 
     rgb(211 211 211) 1px,
@@ -18,6 +18,12 @@
     rgb(211 211 211 / 0) 3px,
     rgb(211 211 211 / 0) 4px), 
     linear-gradient(#E7E7E7 0.01%, #1A1A1A);
+    --btn-txt-color: #FFF;
+    --heart-contour-color:rgb(0 0 0 / 1);
+    --heart-core-color:rgb(255 255 255);
+    --heart-main-body-color:rgb(255 0 0);
+    --heart-sparks-color:rgb(255 0 0);
+    
 }
 
 :root.theme-light {
@@ -39,6 +45,10 @@
     rgb(211 211 211 / 0) 3px,
     rgb(211 211 211 / 0) 4px), 
     linear-gradient(#E7E7E7 0.01%, #1A1A1A);
+    --btn-txt-color: #FFF;
+    --heart-contour-color:rgb(0 0 0 / 1);
+    --heart-sparks-color:rgb(255 0 0 / 1);
+    --heart-main-body-color:rgb(255 0 0);
 }
 
 :root.theme-dark {
@@ -60,12 +70,16 @@
     rgb(211 211 211 / 0) 3px,
     rgb(211 211 211 / 0) 4px), 
     linear-gradient(#007f0c, #004306);
+    --btn-txt-color:#00CC14;
+    --heart-contour-color:rgb(0 204 20 / 1);
+    --heart-sparks-color:rgb(255 0 0 / 1);
+    --heart-main-body-color:rgb(255 0 0);
 }
 
 @media (prefers-color-scheme: light) {
 
 	:root {
-        --bg-color: #FFF;
+    --bg-color: #FFF;
     --main-color:#000;
     --font-weight: 400;
     --title-font-weight: 700;
@@ -83,6 +97,10 @@
     rgb(211 211 211 / 0) 3px,
     rgb(211 211 211 / 0) 4px), 
     linear-gradient(#E7E7E7 0.01%, #1A1A1A);
+    --btn-txt-color: #FFF;
+    --heart-contour-color:rgb(0 0 0 / 1);
+    --heart-sparks-color:rgb(255 0 0 / 1);
+    --heart-main-body-color:rgb(255 0 0);
 	}
 }
 
@@ -107,5 +125,13 @@
     rgb(211 211 211 / 0) 3px,
     rgb(211 211 211 / 0) 4px), 
     linear-gradient(#007f0c, #004306);
+    --btn-txt-color:#00CC14;
+    --heart-contour-color:rgb(0 204 20 / 1);
+    --heart-sparks-color:rgb(255 0 0 / 1);
+    --heart-main-body-color:rgb(255 0 0);
 	}
 }
+
+
+
+
