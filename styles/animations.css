@@ -12,3 +12,105 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes moving {
+
+	from {
+		left: calc((0.875rem) * (-1));
+	}
+
+	to {
+		left: calc((0.875rem + 4px) * (-1));
+	}
+}
+
+.core {
+	transition: fill 0.3s 0.5s ease-in-out;
+}
+
+.main-body {
+	transition: fill 0.3s 0s ease-in-out;
+}
+
+.card__icon-button:hover .core {
+	fill: var(--heart-contour-color, rgb(0 0 0 / 1));
+	transition-delay: 0s;
+}
+
+.card__icon-button:hover .main-body {
+	transition-delay: 0.5s;
+	fill: var(--heart-contour-color, rgb(0 0 0 / 1));
+}
+
+.card__icon-button:active .core {
+	fill: var(--heart-sparks-color, rgb(255 0 0 / 1));
+	transition-delay: 0s;
+}
+
+.card__icon-button:active .main-body {
+	transition-delay: 0.5s;
+	fill: var(--heart-sparks-color, rgb(255 0 0 / 1));
+}
+
+.like-icon.is-liked .core {
+	transition-delay: 0s;
+	fill: var(--heart-sparks-color, rgb(255 0 0 / 1));
+}
+
+.like-icon.is-liked .main-body {
+	transition-delay: 0.5s;
+	fill: var(--heart-sparks-color, rgb(255 0 0 / 1));
+}
+
+.contour {
+	transition-delay: 0.56s;
+}
+
+.like-icon.is-liked .contour {
+	transition-delay: 0.6s;
+	fill: var(--heart-sparks-color, rgb(255 0 0 / 1));
+}
+
+.like-icon.is-liked .heart {
+	animation: liked 0.3s 0.1s ease-in;
+}
+
+@keyframes liked {
+
+	0% {
+		transform:scale(1) translate(0);
+		
+	}
+
+	50% {
+		transform:scale(1.5) 
+	}
+	
+	100% {
+		transform:scale(1) translate(0);
+	}
+}
+
+.sparks {
+	fill: var(--heart-sparks-color);
+	opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+	animation: sparks 0.3s 0.3s ease-in;
+}
+
+@keyframes sparks {
+
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
